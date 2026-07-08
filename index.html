@@ -6,71 +6,146 @@
 <title>Reelmind — the AI edits your footage</title>
 <meta name="description" content="Upload raw footage. Reelmind cuts, scores, subtitles, and refines it with you — in chat.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<div class="grain"></div>
+
 <header class="topbar">
   <div class="topbar-inner">
-    <div class="logo"><span class="logo-dot"></span>Reelmind</div>
+    <div class="logo">
+      <span class="logo-mark">●</span>
+      <span class="logo-word">REELMIND</span>
+    </div>
     <nav class="topnav">
-      <a href="#how">How it works</a>
-      <a href="#try">Editor</a>
+      <a href="#how">How it edits</a>
+      <a href="#dna">Creator DNA</a>
+      <a href="#try">Try it</a>
     </nav>
-    <a class="btn btn-primary btn-sm" href="#try">Open editor</a>
+    <a class="btn btn-ghost" href="#try">Open editor</a>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <p class="eyebrow">AI-NATIVE VIDEO EDITOR</p>
-  <h1 class="hero-title">Upload raw footage.<br>Get a graded, subtitled, retention-scored cut.</h1>
-  <p class="hero-sub">Reelmind reads your footage, plans the edit, cuts it, and explains every decision. Then you refine it by chat — real captions, real thumbnails pulled from your video, real crop previews for every platform.</p>
-  <div class="feature-tags">
-    <span>Auto cuts</span><span>Word-by-word captions</span><span>B-roll suggestions</span>
-    <span>Thumbnail picks</span><span>Title &amp; SEO</span><span>Multi-platform export</span><span>Chat refinement</span>
+  <div class="hero-inner">
+    <p class="eyebrow">TC 00:00:00:00 — READY</p>
+    <h1 class="hero-title">
+      You shot it.<br>
+      <span class="accent">The AI cuts it.</span>
+    </h1>
+    <p class="hero-sub">
+      Drop in a raw recording. Reelmind finds the hook, kills the dead air, scores
+      every cut for retention, and shows its reasoning — then you refine it by
+      typing, not by dragging clips.
+    </p>
+    <div class="hero-cta">
+      <a href="#try" class="btn btn-primary">Upload your footage</a>
+      <a href="#how" class="btn btn-text">See how a cut gets made ↓</a>
+    </div>
   </div>
-  <a href="#try" class="btn btn-primary">Try it with your own video ↓</a>
 
-  <div class="waveform" id="waveform" aria-hidden="true"></div>
+  <div class="filmstrip" aria-hidden="true">
+    <div class="filmstrip-track" id="filmstripTrack"></div>
+  </div>
 </section>
 
+<!-- HOW IT EDITS -->
 <section id="how" class="how">
   <div class="section-head">
-    <p class="eyebrow">HOW IT WORKS</p>
-    <h2>One upload, a full editorial pass</h2>
+    <p class="eyebrow">HOW IT EDITS</p>
+    <h2>One upload. A full editorial pass.</h2>
   </div>
+
   <div class="how-grid">
-    <div class="how-card"><span class="how-n">01</span><h3>Reads the footage</h3><p>Transcribes speech, tracks energy, flags dead air and filler words.</p></div>
-    <div class="how-card"><span class="how-n">02</span><h3>Plans the edit</h3><p>Marks the hook, plans B-roll slots and caption style — and explains why.</p></div>
-    <div class="how-card"><span class="how-n">03</span><h3>Cuts and scores</h3><p>Assembles the timeline, grades the look, scores hook and retention.</p></div>
-    <div class="how-card"><span class="how-n">04</span><h3>You refine in chat</h3><p>"Cut the intro shorter." The AI changes only what you asked.</p></div>
+    <div class="how-card">
+      <span class="how-tc">00:00</span>
+      <h3>Reads the footage</h3>
+      <p>Transcribes speech, tracks faces and energy, detects silence, filler
+        words, false starts, and topic changes across the whole take.</p>
+    </div>
+    <div class="how-card">
+      <span class="how-tc">00:14</span>
+      <h3>Writes an edit plan</h3>
+      <p>Marks the hook, flags slow stretches, plans zooms, B-roll slots, and
+        subtitle style — and tells you why, in plain language, before it cuts.</p>
+    </div>
+    <div class="how-card">
+      <span class="how-tc">00:29</span>
+      <h3>Cuts, scores, subtitles</h3>
+      <p>Assembles the timeline, grades color, ducks music to your voice,
+        and scores the result on hook strength, pacing, and retention.</p>
+    </div>
+    <div class="how-card">
+      <span class="how-tc">00:41</span>
+      <h3>You refine it in chat</h3>
+      <p>"Cut the second story shorter." "Fewer zooms." "More like my last
+        upload." The AI re-edits only what you asked — nothing else moves.</p>
+    </div>
   </div>
 </section>
 
+<!-- CREATOR DNA -->
+<section id="dna" class="dna">
+  <div class="dna-copy">
+    <p class="eyebrow">CREATOR DNA</p>
+    <h2>Teach it your channel, once.</h2>
+    <p class="dna-text">
+      Point it at five or ten of your old uploads. It learns your average cut
+      length, your zoom habits, your subtitle style, your music taste, the
+      jokes that land — and holds onto that profile for every edit after.
+    </p>
+    <ul class="dna-list">
+      <li><span>Cut rhythm</span><em>avg. 2.8s between cuts</em></li>
+      <li><span>Subtitle style</span><em>bold, word-by-word, lower third</em></li>
+      <li><span>Zoom frequency</span><em>on punchlines only</em></li>
+      <li><span>Music</span><em>lo-fi under narration, silence on hooks</em></li>
+    </ul>
+  </div>
+  <div class="dna-visual">
+    <div class="dna-ring">
+      <div class="dna-ring-inner">
+        <span id="dnaScore">92</span>
+        <small>match to your style</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRY IT -->
 <section id="try" class="workbench">
   <div class="section-head">
     <p class="eyebrow">TRY IT — RUNS IN YOUR BROWSER</p>
     <h2>Walk through an edit</h2>
-    <p class="wb-note">Uses your real video for playback, thumbnails, and crop previews — nothing uploads anywhere. The cut plan, scores, and captions are a scripted demo of the product logic. See README.md for what a production backend adds.</p>
+    <p class="wb-note">
+      This is a working simulation of the full flow so you can see the product
+      end to end. No files leave your browser. See the README for what it
+      takes to wire this to a real rendering backend.
+    </p>
   </div>
 
   <div class="wb-shell" id="wbShell">
 
+    <!-- STEP 1: UPLOAD -->
     <div class="wb-step" id="step-upload" data-step="upload">
       <div class="dropzone" id="dropzone">
         <input type="file" id="fileInput" accept="video/*" hidden>
-        <p class="dz-title">Drop your footage here</p>
-        <p class="dz-sub">or choose a file — it plays back for real in the next steps</p>
+        <p class="dz-title">Drop your raw footage here</p>
+        <p class="dz-sub">or click to choose a file — MP4, MOV, MKV</p>
         <button class="btn btn-primary" id="chooseFileBtn" type="button">Choose file</button>
       </div>
-      <div class="dz-optional-row">
-        <span>Reference video (optional)</span>
-        <button class="btn btn-ghost btn-sm" id="refBtn" type="button">+ Add reference</button>
-        <span class="dz-ref-status" id="refStatus"></span>
+      <div class="dz-optional">
+        <div class="dz-optional-row">
+          <span>Reference video (optional)</span>
+          <button class="btn btn-ghost btn-sm" id="refBtn" type="button">+ Add reference</button>
+          <span class="dz-ref-status" id="refStatus"></span>
+        </div>
       </div>
     </div>
 
+    <!-- STEP 2: GOAL + STYLE -->
     <div class="wb-step hidden" id="step-style" data-step="style">
       <h3>What are you editing?</h3>
       <div class="chip-row" id="goalChips">
@@ -89,6 +164,7 @@
       <button class="btn btn-primary" id="startAnalysis">Start editing →</button>
     </div>
 
+    <!-- STEP 3: ANALYSIS -->
     <div class="wb-step hidden" id="step-analysis" data-step="analysis">
       <div class="analysis-head">
         <h3>Editing <span id="fileNameLabel">your footage</span>…</h3>
@@ -97,122 +173,46 @@
       <div class="log" id="analysisLog"></div>
     </div>
 
+    <!-- STEP 4: RESULTS -->
     <div class="wb-step hidden" id="step-results" data-step="results">
       <div class="results-grid">
 
         <div class="results-main">
           <div class="preview">
-            <video id="mainVideo" controls></video>
-            <div class="caption-overlay" id="captionOverlay"></div>
+            <div class="preview-frame">
+              <span class="preview-tc">00:00:08:12</span>
+              <span class="play-badge">▶</span>
+            </div>
           </div>
 
           <div class="scorebar" id="scorebar"></div>
 
           <div class="timeline" id="timeline"></div>
-          <p class="timeline-hint">Click a segment to jump the player there.</p>
+
+          <div class="rationale" id="rationale">
+            <h4>Why these cuts</h4>
+            <ul id="rationaleList"></ul>
+          </div>
         </div>
 
-        <div class="results-panel">
-          <div class="tabbar" id="tabbar">
-            <button class="tab active" data-tab="refine">Refine</button>
-            <button class="tab" data-tab="captions">Captions</button>
-            <button class="tab" data-tab="broll">B-roll</button>
-            <button class="tab" data-tab="thumbs">Thumbnails</button>
-            <button class="tab" data-tab="seo">Title &amp; SEO</button>
-            <button class="tab" data-tab="export">Export</button>
+        <div class="results-chat">
+          <div class="chat-head">
+            <h4>Refine it</h4>
+            <p>Ask for changes in plain language. Only the parts you mention move.</p>
           </div>
-
-          <!-- Refine -->
-          <div class="tab-pane active" data-pane="refine">
-            <div class="chat-log" id="chatLog"></div>
-            <div class="chat-suggestions" id="chatSuggestions"></div>
-            <form class="chat-input-row" id="chatForm">
-              <input type="text" id="chatInput" placeholder="e.g. cut the intro shorter" autocomplete="off">
-              <button class="btn btn-primary btn-sm" type="submit">Send</button>
-            </form>
-          </div>
-
-          <!-- Captions -->
-          <div class="tab-pane" data-pane="captions">
-            <p class="pane-note">Live style controls for the caption overlay on your video.</p>
-            <div class="field-row">
-              <span>Position</span>
-              <div class="seg-control" id="capPosition">
-                <button class="active" data-val="bottom">Bottom</button>
-                <button data-val="center">Center</button>
-              </div>
-            </div>
-            <div class="field-row">
-              <span>Weight</span>
-              <div class="seg-control" id="capWeight">
-                <button class="active" data-val="bold">Bold</button>
-                <button data-val="normal">Regular</button>
-              </div>
-            </div>
-            <div class="field-row">
-              <span>Accent</span>
-              <div class="swatch-row" id="capColor">
-                <button class="swatch active" style="--sw:#4F46E5" data-val="#4F46E5"></button>
-                <button class="swatch" style="--sw:#FF5A36" data-val="#FF5A36"></button>
-                <button class="swatch" style="--sw:#0EA394" data-val="#0EA394"></button>
-                <button class="swatch" style="--sw:#F2C94C" data-val="#F2C94C"></button>
-              </div>
-            </div>
-          </div>
-
-          <!-- B-roll -->
-          <div class="tab-pane" data-pane="broll">
-            <p class="pane-note">Suggested cutaways for slower stretches in your timeline.</p>
-            <div class="broll-list" id="brollList"></div>
-          </div>
-
-          <!-- Thumbnails -->
-          <div class="tab-pane" data-pane="thumbs">
-            <p class="pane-note">Real frames pulled from your video. Click to preview and set as cover.</p>
-            <div class="thumb-grid" id="thumbGrid"></div>
-          </div>
-
-          <!-- SEO -->
-          <div class="tab-pane" data-pane="seo">
-            <div class="seo-field">
-              <label>Title</label>
-              <p id="seoTitle" class="seo-value"></p>
-            </div>
-            <div class="seo-field">
-              <label>Description</label>
-              <p id="seoDesc" class="seo-value"></p>
-            </div>
-            <div class="seo-field">
-              <label>Hashtags</label>
-              <p id="seoTags" class="seo-value mono"></p>
-            </div>
-            <button class="btn btn-ghost btn-sm" id="seoRegen" type="button">↻ Generate another version</button>
-          </div>
-
-          <!-- Export -->
-          <div class="tab-pane" data-pane="export">
-            <p class="pane-note">Real crop preview of your video for each platform.</p>
-            <div class="seg-control" id="ratioControl">
-              <button class="active" data-val="16-9">16:9</button>
-              <button data-val="9-16">9:16</button>
-              <button data-val="1-1">1:1</button>
-            </div>
-            <div class="ratio-preview" id="ratioPreview">
-              <video id="cropVideo" muted></video>
-            </div>
-            <div class="platform-row">
-              <button class="btn btn-ghost btn-sm" data-platform="YouTube">Export for YouTube</button>
-              <button class="btn btn-ghost btn-sm" data-platform="Shorts / TikTok">Export for Shorts / TikTok</button>
-              <button class="btn btn-ghost btn-sm" data-platform="Instagram">Export for Instagram</button>
-            </div>
-          </div>
-
+          <div class="chat-log" id="chatLog"></div>
+          <div class="chat-suggestions" id="chatSuggestions"></div>
+          <form class="chat-input-row" id="chatForm">
+            <input type="text" id="chatInput" placeholder="e.g. cut the intro shorter" autocomplete="off">
+            <button class="btn btn-primary btn-sm" type="submit">Send</button>
+          </form>
         </div>
+
       </div>
 
       <div class="export-row">
         <button class="btn btn-ghost" id="restartBtn" type="button">Start a new edit</button>
-        <span class="toast" id="toast"></span>
+        <button class="btn btn-primary" id="exportBtn" type="button">Export for YouTube</button>
       </div>
     </div>
 
@@ -220,7 +220,7 @@
 </section>
 
 <footer class="site-footer">
-  <p>Reelmind — an open starter kit for an AI-native video editor. See README.md for what's simulated and what to wire up for real.</p>
+  <p>Reelmind — an open starter kit for an AI-native video editor. See the README for what's simulated and what to wire up for real.</p>
 </footer>
 
 <script src="app.js"></script>
